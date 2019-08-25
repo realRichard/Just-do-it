@@ -1,0 +1,43 @@
+body {
+	background: no-repeat center center/cover url('bigData.webp');
+	/* vh/vw 
+	vh: 相对于视窗的高度, 视窗被均分为100单位的vh; 
+	vw: 相对于视窗的宽度, 视窗被均分为100单位的vw;
+
+	vmax: 相对于视窗的宽度或高度中较大的那个。其中最大的那个被均分为100单位的vmax; 
+	vmin: 相对于视窗的宽度或高度中较小的那个。其中最小的那个被均分为100单位的vmin; 
+	视区所指为浏览器内部的可视区域大小， 
+	即window.innerWidth/window.innerHeight大小，不包含任务栏标题栏以及底部工具栏的浏览器区域大小 */
+	height: 100vh;
+	color: aliceblue;
+	overflow: hidden;
+}
+
+.container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	height: 100%;
+	padding: 0 3rem;
+}
+
+h1, h2 {
+	font-weight: 500;
+	margin: 0.3rem;
+}
+
+/* 媒体查询 */
+@media(min-width: 1200px) {
+	h1 {
+		font-size: 5rem;
+	}
+}
+
+@media(max-width: 800px) {
+	.container {
+		padding: 0 1rem;
+	}
+	h1 {
+		font-size: 3rem;
+	}
+}
