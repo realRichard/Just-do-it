@@ -1,0 +1,61 @@
+/* spinner 1 */
+/* 哇,, 搞了半天, ....结果是 before 前面不能有空格 ,,,这语法,, 完全违背代码风格,,为什么不能一致性 */
+.spinner-1::before {
+	content:"";
+	box-sizing: border-box;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	height: 60px;
+	width: 60px;
+	margin-top: -30px;
+	margin-left: -30px;
+	border: 3px solid lightskyblue;
+	border-radius: 50%;
+	border-top-color: chartreuse;
+	animation: spinner 0.7s linear infinite;
+
+}
+
+/* spinner 2 */
+.spinner-2::before {
+	content: "";
+	box-sizing: border-box;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	height: 60px;
+	width: 60px;
+	margin-top: -30px;
+	margin-left: -30px;
+	border: 2px solid transparent;
+	border-radius: 50%;
+	border-top-color: chartreuse;
+	border-bottom-color: deeppink;
+	animation: spinner 0.7s ease infinite;
+
+}
+
+/* spinner 3 */
+.spinner-3::before {
+	content: "";
+	box-sizing: border-box;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	height: 60px;
+	width: 60px;
+	margin-top: -30px;
+	margin-left: -30px;
+	border-radius: 50%;
+	border-top: 2px solid coral;
+	border-right: 2px solid transparent;
+	animation: spinner 0.7s linear infinite;
+
+}
+
+@keyframes spinner {
+	to {
+		transform: rotate(360deg);
+	}
+}

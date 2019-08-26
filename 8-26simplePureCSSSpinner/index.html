@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>CSS spinner</title>
+	<link rel="stylesheet" href="main.css">
+</head>
+<body>
+	<div class="main">
+		<h1>Welcome To My Website</h1>
+		<p>Chrome Dev Summit registration is now open! Join us for our annual developer conference at the Yerba Buena Center
+			for the Arts in San Francisco, CA on November 11-12, 2019. Over the two days, you’ll learn about the latest tools
+			and updates coming to the web platform and hear directly from the Chrome product & engineering teams. Request your
+			invite at the Chrome Dev Summit 2019 website</p>
+	</div>
+	
+	<script>
+		// 把 p 标签隐藏
+		document.querySelector('.main > p').style.display = 'none'
+		// 给 .mian 加上 class 
+		document.querySelector('.main').classList.add('spinner-3')
+
+		// 用个定时器
+		setTimeout(function(){
+			// 显示 p 标签
+			document.querySelector('.main > p').style.display = 'inline-block'
+			// 给 .mian 删除 class
+			document.querySelector('.main').classList.remove('spinner-3')
+		}, 3000)
+
+	</script>
+</body>
+</html>
